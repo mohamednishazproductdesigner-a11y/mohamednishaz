@@ -36,6 +36,6 @@ function showStatus(i){document.getElementById('statusBadge').textContent=status
 let toastTimer;function toast(t){document.getElementById('toast').textContent=t;clearTimeout(toastTimer);toastTimer=setTimeout(()=>document.getElementById('toast').textContent='',3500)}
 document.querySelectorAll('[data-copy]').forEach(b=>b.addEventListener('click',async()=>{const text=document.getElementById(b.dataset.copy).innerText;try{if(navigator.clipboard&&window.isSecureContext){await navigator.clipboard.writeText(text)}else{const ta=document.createElement('textarea');ta.value=text;ta.style.position='fixed';ta.style.left='-9999px';document.body.appendChild(ta);ta.select();const ok=document.execCommand('copy');ta.remove();if(!ok)throw Error('Copy unavailable')}toast('Copied. Ready to paste.')}catch{const r=document.createRange();r.selectNodeContents(document.getElementById(b.dataset.copy));const s=window.getSelection();s.removeAllRanges();s.addRange(r);toast('Text selected. Press Ctrl+C or ⌘C to copy.')} }));
 function progress(){const max=document.documentElement.scrollHeight-innerHeight;document.getElementById('progress').style.width=(max>0?scrollY/max*100:0)+'%'}addEventListener('scroll',progress,{passive:true});addEventListener('resize',progress);progress();
-</script><div data-portfolio-shell="footer"></div><script src="../case-study-shell.js" defer></script>
+</script><div data-portfolio-shell="footer"></div><script src="../case-study-shell.js?v=ee5b2b797200" defer></script>
 <script src="../portfolio-navigation.js" defer></script>
 </body></html>

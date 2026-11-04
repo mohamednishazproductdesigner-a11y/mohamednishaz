@@ -42,6 +42,7 @@
   document.querySelectorAll('[data-experience]').forEach((row,rowIndex)=>{
     const company=row.querySelector('h3').textContent;
     const supplied=experienceImages[row.dataset.experience];
+    if(row.dataset.experience==='ellipsis')return;
     const images=supplied?.length?supplied:mockups.map((_,i)=>mockups[(i+rowIndex)%mockups.length]);
     const gallery=document.createElement('div');
     gallery.className='experience-previews';
