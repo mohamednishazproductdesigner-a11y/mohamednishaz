@@ -686,4 +686,5 @@ document.querySelectorAll('[data-cmp]').forEach(c=>{const set=f=>{f=Math.min(1,M
  const mv=e=>{const r=c.getBoundingClientRect();set((e.clientX-r.left)/r.width)};
  c.addEventListener('pointerdown',e=>{drag=true;mv(e);c.setPointerCapture(e.pointerId)});c.addEventListener('pointermove',e=>{if(drag)mv(e)});c.addEventListener('pointerup',()=>drag=false);
  if(!STATIC){let t=0;new IntersectionObserver(([e])=>{if(e.isIntersecting&&!t){t=1;let s=null;const an=ts=>{s??=ts;const p=(ts-s)/1700;if(p<1){set(.5+Math.sin(p*Math.PI*2)*.32);requestAnimationFrame(an)}else set(.5)};requestAnimationFrame(an)}},{threshold:.4}).observe(c)}});
-</script><div data-portfolio-shell="footer"></div><script src="../case-study-shell.js?v=ee5b2b797200" defer></script><script src="../portfolio-navigation.js" defer></script></body></html>
+</script><div data-portfolio-shell="footer"></div><script src="../case-study-shell.js?v=ee5b2b797200" defer></script><script src="../portfolio-navigation.js" defer></script><script src="../media-preview.js" defer></script>
+</body></html>
