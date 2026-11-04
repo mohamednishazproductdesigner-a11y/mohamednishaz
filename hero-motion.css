@@ -1,0 +1,37 @@
+/* The reference's stepped words, rolling glyph windows, and integrated objects. */
+.hero{padding:80px 64px 90px;overflow:hidden}
+.hero .composition{text-align:left}
+.name-stage{position:relative;width:100%;padding:25px 0 30px;perspective:1400px}
+.hero .name-title{position:relative;z-index:1;padding:0;font-size:clamp(76px,13.1vw,190px);font-weight:500;line-height:1.05;letter-spacing:-.065em;text-align:left;white-space:normal;color:#fffce1}
+.hero .name-title span{color:inherit}
+.hero .name-title .name-line{display:block;white-space:nowrap;height:1.05em}
+.hero .name-title .name-line-last{margin-top:-.09em;margin-left:31%}
+/* Side gutters protect glyph curves; negative margins preserve the tight spacing. */
+.name-letter{position:relative;display:inline-block;height:1.05em;vertical-align:top;overflow:hidden;padding-inline:.08em;margin-inline:-.08em}
+.name-sizer{display:block;visibility:hidden}
+.name-track{position:absolute;left:.08em;top:0;display:block;transform:translateY(-2.1em)}
+.name-glyph{display:block;height:1.05em;line-height:1.05;transform-origin:center 70%}
+.name-bolt-gap{display:inline-block;width:.3em;height:1.05em;vertical-align:top}
+.hero-objects{position:absolute;inset:0;pointer-events:none;perspective:900px}
+.hero-shape{position:absolute;z-index:2;transform-origin:center;filter:drop-shadow(0 3px 2px #0003)}
+.hero-shape svg{display:block;width:100%;height:100%;overflow:visible}
+.shape-visual{width:100%;height:100%;transform-style:preserve-3d}
+.shape-rotor .shape-visual{animation:rotor-turn 7s linear infinite}
+.shape-bolt .shape-visual{animation:bolt-pulse 3.8s steps(1,end) infinite}
+.shape-bolt path:first-child{fill:var(--bolt-fill,#08ea66);stroke:#08ea66;stroke-width:1.6}
+.shape-bolt path:not(:first-child){opacity:var(--bolt-detail,1)}
+.shape-spring .shape-visual{animation:spring-twist 4.8s ease-in-out infinite;transform-origin:50% 0}
+.hero-statement{--statement-gray:#828282;--reveal-color:var(--ink);max-width:850px;margin:48px auto 0;text-align:center;text-wrap:balance}
+.hero-statement p{margin:0;color:var(--reveal-color)}
+.statement-lead{font-size:clamp(27px,3.1vw,42px);line-height:1.35;font-weight:500;letter-spacing:-1.2px}
+.hero-statement .statement-previous{margin-top:28px;font-size:clamp(21px,2.1vw,28px);line-height:1.4;font-weight:600;letter-spacing:-.65px}
+.hero-statement .statement-context{margin-top:10px;font-size:16px;line-height:1.6;letter-spacing:-.15px}
+.statement-index{--reveal-color:#009eaa;color:var(--reveal-color);white-space:nowrap}
+.statement-pickme{--reveal-color:#ffcc1b;color:var(--reveal-color)}
+.statement-word{color:color-mix(in srgb,var(--statement-gray),var(--reveal-color) var(--word-progress,100%))}
+.hero.is-offscreen .shape-visual{animation-play-state:paused}
+@keyframes rotor-turn{0%{transform:rotate(0) rotateY(-8deg)}50%{transform:rotate(180deg) rotateY(8deg)}100%{transform:rotate(360deg) rotateY(-8deg)}}
+@keyframes bolt-pulse{0%,30%,60%,100%{--bolt-fill:#08ea66;--bolt-detail:1;transform:scale(1)}35%,45%{--bolt-fill:transparent;--bolt-detail:0;transform:scale(.97)}40%{--bolt-fill:#08ea66;--bolt-detail:1;transform:scale(1.03)}}
+@keyframes spring-twist{0%,100%{transform:rotateY(-18deg) rotate(-8deg) scaleY(1)}50%{transform:rotateY(24deg) rotate(7deg) scaleY(.88)}}
+@media(max-width:760px){.hero{padding:75px 24px 70px}.name-stage{padding:18px 0 26px}.hero .name-title{font-size:clamp(56px,18.5vw,118px)}.hero .name-title .name-line-last{margin-left:26%}.hero-statement{margin-top:38px;max-width:560px}.statement-lead{font-size:clamp(25px,5.5vw,34px);letter-spacing:-.65px;line-height:1.4}.hero-statement .statement-previous{margin-top:24px;font-size:21px;letter-spacing:-.4px}.hero-statement .statement-context{font-size:14px;margin-top:12px}}
+@media(prefers-reduced-motion:reduce){.shape-visual{animation:none!important}.shape-star{display:none}}
