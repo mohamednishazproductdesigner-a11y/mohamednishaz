@@ -111,6 +111,7 @@ principles.forEach(step=>{step.tabIndex=0;['pointerenter','pointerleave','focus'
 
 
 const book=document.querySelector('.journey-book');
+if(book){
 const bookCover=book.querySelector('.book-cover');
 const bookSpread=book.querySelector('.book-spread');
 const previousPage=document.querySelector('.book-previous');
@@ -208,6 +209,7 @@ book.addEventListener('keydown',event=>{
   }
 });
 renderBook();
+}
 document.querySelector('#footer-year').textContent=new Date().getFullYear();
 
 const dubaiClock=document.querySelector('[data-dubai-clock]');
