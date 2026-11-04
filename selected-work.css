@@ -106,3 +106,6 @@
 
 #projects .circlo-updated-preview{aspect-ratio:16/9}
 #projects .circlo-cover{display:block;width:100%;height:100%;object-fit:contain;border-radius:inherit}
+
+#projects .amazon-review-preview{background:var(--bg);aspect-ratio:16/9}
+#projects .amazon-review-preview>img{display:block;width:100%;height:100%;object-fit:contain}

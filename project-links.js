@@ -2,7 +2,7 @@
 // Empty entries keep the card display-only. Configured links open in a new tab.
 const projectLinks={
   'lumen':'case-studies/lumen.html',
-  'gather':'case-studies/gather.html',
+  'amazon-review':'case-studies/amazon-review.html',
 };
 document.querySelectorAll('[data-project]').forEach(card=>{
   const url=projectLinks[card.dataset.project]?.trim();
