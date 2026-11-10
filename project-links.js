@@ -1,6 +1,7 @@
 // Paste each project's destination URL here when it is ready.
 // Empty entries keep the card display-only. Configured links open in a new tab.
 const projectLinks={
+  'fit-assistant':'case-studies/fit-assistant.html',
   'pulsewise':'case-studies/pulsewise.html',
   'store-admin':'case-studies/store-admin.html',
   'lumen':'case-studies/lumen.html',

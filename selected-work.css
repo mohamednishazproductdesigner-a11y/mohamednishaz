@@ -115,3 +115,6 @@
 
 #projects .pulsewise-preview{background:#f2f7f6;aspect-ratio:16/9}
 #projects .pulsewise-preview>img{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:contain}
+
+#projects .fit-assistant-preview{aspect-ratio:16/9;background:#ecebe6}
+#projects .fit-assistant-cover{display:block;width:100%;height:100%;object-fit:contain;border-radius:inherit}
